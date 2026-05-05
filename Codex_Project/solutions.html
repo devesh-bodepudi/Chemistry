@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtraWatch | Approaches and Best Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AtraWatch</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="chemistry.html">Chemistry</a>
+        <a href="organisms.html">Organisms</a>
+        <a href="pathway.html">Pathway</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <p class="eyebrow">Approaches and best practice</p>
+      <h1>Control the Source, Protect the Tap</h1>
+      <p class="lead">Atrazine management combines regulation, farm-scale water treatment, microbial chemistry, and engineered drinking water treatment.</p>
+    </section>
+
+    <section class="section narrow reveal">
+      <p>The atrazine contamination problem has been approached from multiple angles, including regulatory banning, agricultural practice reform, drinking water engineering, and bioremediation research. Different nations and institutions have made markedly different choices, reflecting different applications of the precautionary principle.</p>
+    </section>
+
+    <section class="section reaction-grid">
+      <article class="reaction-card reveal">
+        <h3>European Union: Regulatory Ban, 2004</h3>
+        <p>Following the European Parliament's Directive 91/414/EEC review, atrazine was denied re-registration in the EU in 2003 and banned effective October 2004. The primary reason: atrazine and its chlorinated metabolites (DEA, DIA) were consistently found in groundwater above the EU drinking water threshold of 0.1 microg/L, a standard 30 times more stringent than the US MCL.</p>
+        <p>The EU threshold (0.1 microg/L) is not health-based but precautionary: it applies to all pesticides equally, regardless of individual toxicity.</p>
+        <p>Outcome: within 5 years of the ban, atrazine detections in European monitoring wells declined by 60-80%. Replacement herbicides (mesotrione, nicosulfuron) showed lower aquatic mobility.</p>
+        <p>Countries following the EU ban: all 27 EU member states, Switzerland, Norway, and most of the world excluding North America, Brazil, and Australia.</p>
+      </article>
+
+      <article class="reaction-card reveal">
+        <h3>United States EPA: Risk-Based Regulation</h3>
+        <p>The US EPA's approach is risk-based: a pesticide is permitted unless health risks at realistic exposure levels are unacceptable. Atrazine's MCL of 3 microg/L was set in 1991 based on chronic exposure studies in rodents.</p>
+        <p>In 2006 and again in 2012, EPA conducted comprehensive re-evaluations. The agency acknowledged endocrine concerns but maintained registration, citing economic benefits (estimated $2.3 billion per year in corn yield protection) and disputed the dose-response relationship at sub-MCL concentrations.</p>
+        <p>In 2020, EPA issued updated Endangered Species Act findings acknowledging atrazine harms 1,013 species. Mitigation measures (spray buffer zones, application setbacks from water) were mandated.</p>
+        <p>Current status: legal in US with label requirements.</p>
+      </article>
+
+      <article class="reaction-card reveal">
+        <h3>Constructed Wetlands: Agricultural Best Management Practice</h3>
+        <p>Constructed treatment wetlands (CTW) placed at the outlet of tile drainage systems have demonstrated 50-98% atrazine removal efficiency in field studies.</p>
+        <h4>Removal mechanisms</h4>
+        <ol class="number-list">
+          <li>Photodegradation in open water surface (increased solar exposure versus streams with riparian shade)</li>
+          <li>Microbial degradation in anaerobic sediment layers: organisms including Nocardioides sp. utilize atrazine as a nitrogen source</li>
+          <li>Phytodegradation by emergent macrophytes (Typha latifolia, Phragmites)</li>
+        </ol>
+        <p>Microbial degradation: the atz gene cluster (atzA through atzF) encodes the complete atrazine mineralization pathway:</p>
+        <div class="reaction-equation">
+          AtzA (atrazine chlorohydrolase, step 1):<br>
+          <span class="formula">C<sub>8</sub>H<sub>14</sub>ClN<sub>5</sub></span> + <span class="formula">H<sub>2</sub>O</span> -> <span class="formula">C<sub>8</sub>H<sub>15</sub>N<sub>5</sub>O</span> + <span class="formula">HCl</span><br>
+          Atrazine -> Hydroxyatrazine + <span class="formula">HCl</span>
+        </div>
+        <p>AtzB and AtzC then remove the side chains from hydroxyatrazine, yielding cyanuric acid (<span class="formula">C<sub>3</sub>H<sub>3</sub>N<sub>3</sub>O<sub>3</sub></span>).</p>
+        <div class="reaction-equation">AtzD, AtzE, and AtzF open the cyanuric acid ring:<br>Cyanuric acid -> biuret -> allophanate -> NH<sub>3</sub> + CO<sub>2</sub></div>
+        <p>Iowa State University study (Crumpton, 2001): a wetland-to-watershed area ratio of 2-3% reduces annual atrazine export by 50-70%.</p>
+        <p>Cost: $150-300 per acre of drainage area (one-time construction)</p>
+      </article>
+
+      <article class="reaction-card reveal">
+        <h3>Bioremediation Research: Arthrobacter and Nocardioides Strains</h3>
+        <p>Soil microbiologists have isolated bacteria capable of mineralizing atrazine as their sole nitrogen source. The atrazine chlorohydrolase enzyme (AtzA) catalyzes the first dechlorination step; subsequent enzymes (AtzB through AtzF) complete ring opening to <span class="formula">CO<sub>2</sub></span> and <span class="formula">NH<sub>3</sub></span>. The full atz gene cluster has been characterized and is the subject of active bioaugmentation research.</p>
+      </article>
+
+      <article class="reaction-card reveal">
+        <h3>Advanced Oxidation: Treatment Technology</h3>
+        <p>Ozone-hydrogen peroxide (<span class="formula">O<sub>3</sub>/H<sub>2</sub>O<sub>2</sub></span>) advanced oxidation generates hydroxyl radicals that non-selectively oxidize atrazine:</p>
+        <div class="reaction-equation">
+          OH radical + <span class="formula">C<sub>8</sub>H<sub>14</sub>ClN<sub>5</sub></span> -> ring-opening products -> <span class="formula">CO<sub>2</sub></span> + <span class="formula">H<sub>2</sub>O</span> + <span class="formula">NO<sub>3</sub>-</span> + <span class="formula">Cl-</span><br>
+          Rate constant: 3 x 10<sup>9</sup> M<sup>-1</sup> s<sup>-1</sup> (near the diffusion limit)<br>
+          Contact time required: 5-10 minutes at <span class="formula">[O<sub>3</sub>]</span> = 5 mg/L<br>
+          Removal efficiency: greater than 99%<br>
+          Limitation: cost ($0.30-0.80 per 1000 gallons additional); DBP formation risk
+        </div>
+      </article>
+    </section>
+
+    <section class="section reveal" aria-labelledby="best-practice-title">
+      <article class="guide-card">
+        <p class="eyebrow">Recommended best practice</p>
+        <h2 id="best-practice-title">Constructed Wetlands Combined with a Science-Based Lower Drinking Water Standard</h2>
+        <p>No single intervention addresses atrazine contamination at all points in the pathway. However, the combination of constructed wetland implementation at the field-to-stream interface and adoption of a more stringent drinking water standard represents the most scientifically justified, economically feasible, and environmentally protective approach.</p>
+        <h3>Why Constructed Wetlands Are the Best Source-Control Option</h3>
+        <p>They exploit natural photolysis, microbial metabolism, and plant uptake, processes that require no chemical inputs, no energy, and no ongoing reagents. The atz gene pathway represents bioremediation driven by microbial nitrogen demand, at no cost once the community is established. Treatment occurs at the source, before atrazine reaches aquifers with residence times of decades. Once contaminated, groundwater cannot be practically remediated at basin scale. Cost ($150-300 per acre) is recoverable through reduced downstream water treatment costs and avoided regulatory liability.</p>
+        <h3>Why a Lower MCL Is Justified</h3>
+        <p>Hayes et al. (2002) documented endocrine disruption at 0.1 ppb, a concentration 30 times below the current MCL. The MCL was set before this evidence existed. The EU demonstrated that compliance at 0.1 microg/L is achievable with modern treatment and reduced application rates.</p>
+        <p>This combination addresses the contamination pathway at both the agricultural stage (before atrazine enters water) and the utility stage (before it reaches taps).</p>
+      </article>
+    </section>
+
+    <section class="section reveal" aria-labelledby="comparison-title">
+      <h2 id="comparison-title">Approach Comparison</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Approach</th>
+              <th>Removal Efficiency</th>
+              <th>Cost</th>
+              <th>Addresses Root Cause?</th>
+              <th>Scalability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EU Ban</td>
+              <td>60-80% in monitoring</td>
+              <td>Low (regulatory)</td>
+              <td>Yes</td>
+              <td>High (national)</td>
+            </tr>
+            <tr>
+              <td>US EPA restrictions</td>
+              <td>Marginal</td>
+              <td>Low</td>
+              <td>Partial</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Constructed Wetlands</td>
+              <td>50-98%</td>
+              <td>$150-300/acre</td>
+              <td>Yes</td>
+              <td>High (farm-scale)</td>
+            </tr>
+            <tr>
+              <td>Bioremediation</td>
+              <td>Experimental</td>
+              <td>Unknown</td>
+              <td>Yes</td>
+              <td>Low (research stage)</td>
+            </tr>
+            <tr>
+              <td>AOP Water Treatment</td>
+              <td>Greater than 99%</td>
+              <td>High</td>
+              <td>No (endpoint only)</td>
+              <td>Medium</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Created for NJIT Science Olympiad Chemistry Website Design 2026</p>
+    <p>Topic: Spread of Chemical Waste in Aqueous Environments: Atrazine in Agricultural Watersheds</p>
+    <p>Coordinator: Dr. Kevin Koh | kjk@njit.edu</p>
+    <p><a href="references.html">View Full Citations</a></p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
