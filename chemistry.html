@@ -52,46 +52,69 @@
     <section class="section reveal" aria-labelledby="structure-title">
       <h2 id="structure-title">Chemical Structure</h2>
       <div class="glass-card svg-frame">
-        <svg class="structure-svg" viewBox="0 0 500 400" role="img" aria-label="Atrazine structural diagram with labeled triazine ring, chlorine, ethylamino group, and isopropylamino group">
-          <defs>
-            <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#f4c542"></path>
-            </marker>
-          </defs>
-          <polygon points="250,78 337,128 337,228 250,278 163,228 163,128" fill="none" stroke="#f4c542" stroke-width="2.5"/>
-          <line x1="250" y1="78" x2="337" y2="128" stroke="#f4c542" stroke-width="1.4"/>
-          <line x1="337" y1="228" x2="250" y2="278" stroke="#f4c542" stroke-width="1.4"/>
-          <line x1="163" y1="228" x2="163" y2="128" stroke="#f4c542" stroke-width="1.4"/>
-          <text x="244" y="73" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">N</text>
-          <text x="343" y="132" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">C</text>
-          <text x="343" y="232" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">N</text>
-          <text x="245" y="296" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">C</text>
-          <text x="147" y="232" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">N</text>
-          <text x="145" y="132" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">C</text>
+        <svg class="structure-svg" viewBox="0 0 600 470" role="img" aria-label="Atrazine skeletal structural formula: 1,3,5-triazine ring with ethylamino at C-2, isopropylamino at C-4, and chlorine leaving group at C-6">
+          <!--
+            Regular flat-top hexagon: side s=85, center (300,262)
+            s*sqrt(3)/2 = 73.6 (vertical offset to TL/TR/BL/BR)
+            s/2 = 42.5 (horizontal offset to TL/TR/BL/BR)
 
-          <line x1="250" y1="278" x2="250" y2="334" stroke="#a8c8b8" stroke-width="2"/>
-          <text x="212" y="358" fill="#e05c5c" font-family="IBM Plex Mono" font-size="16">Cl</text>
+            Vertices and atom assignments (1,3,5-triazine alternates N-C-N-C-N-C):
+              TL (258, 188)  = N  position 1
+              TR (342, 188)  = C  position 2  -> ethylamino  -NH-CH2CH3
+              R  (385, 262)  = N  position 3
+              BR (342, 336)  = C  position 4  -> isopropylamino  -NH-CH(CH3)2
+              BL (258, 336)  = N  position 5
+              L  (215, 262)  = C  position 6  -> Cl (leaving group)
+          -->
 
-          <line x1="337" y1="128" x2="420" y2="82" stroke="#a8c8b8" stroke-width="2"/>
-          <text x="358" y="76" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">NH-CH2CH3</text>
+          <!-- Ring bonds -->
+          <line x1="258" y1="188" x2="342" y2="188" stroke="#f4c542" stroke-width="2.5"/>
+          <line x1="342" y1="188" x2="385" y2="262" stroke="#f4c542" stroke-width="2.5"/>
+          <line x1="385" y1="262" x2="342" y2="336" stroke="#f4c542" stroke-width="2.5"/>
+          <line x1="342" y1="336" x2="258" y2="336" stroke="#f4c542" stroke-width="2.5"/>
+          <line x1="258" y1="336" x2="215" y2="262" stroke="#f4c542" stroke-width="2.5"/>
+          <line x1="215" y1="262" x2="258" y2="188" stroke="#f4c542" stroke-width="2.5"/>
 
-          <line x1="163" y1="128" x2="80" y2="82" stroke="#a8c8b8" stroke-width="2"/>
-          <text x="16" y="76" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14">NH-CH(CH3)2</text>
+          <!-- N labels at positions 1 (TL), 3 (R), 5 (BL) — C positions unlabeled per skeletal convention -->
+          <text x="248" y="180" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14" text-anchor="middle">N</text>
+          <text x="400" y="267" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14" text-anchor="start">N</text>
+          <text x="248" y="354" fill="#dce8e0" font-family="IBM Plex Mono" font-size="14" text-anchor="middle">N</text>
 
-          <rect x="22" y="312" width="143" height="52" rx="8" fill="rgba(13,27,42,0.92)" stroke="rgba(244,197,66,0.55)"/>
-          <path d="M165 338 C182 342, 197 347, 214 350" fill="none" stroke="#f4c542" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-          <text x="36" y="334" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">Leaving group</text>
-          <text x="36" y="351" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">(hydrolysis target)</text>
+          <!-- C-2 (TR 342,188): ethylamino group, bond going upper-right -->
+          <line x1="342" y1="188" x2="413" y2="150" stroke="#a8c8b8" stroke-width="2"/>
+          <text x="418" y="147" fill="#dce8e0" font-family="IBM Plex Mono" font-size="13" text-anchor="start">-NH-CH<tspan dy="4" font-size="9">2</tspan><tspan dy="-4" font-size="13">CH</tspan><tspan dy="4" font-size="9">3</tspan></text>
 
-          <rect x="18" y="16" width="154" height="52" rx="8" fill="rgba(13,27,42,0.92)" stroke="rgba(244,197,66,0.55)"/>
-          <path d="M172 57 C195 66, 214 75, 236 88" fill="none" stroke="#f4c542" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-          <text x="32" y="38" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">Aromatic stability</text>
-          <text x="32" y="55" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">(resists biodegradation)</text>
+          <!-- C-4 (BR 342,336): isopropylamino group, bond going lower-right -->
+          <line x1="342" y1="336" x2="413" y2="374" stroke="#a8c8b8" stroke-width="2"/>
+          <text x="418" y="378" fill="#dce8e0" font-family="IBM Plex Mono" font-size="13" text-anchor="start">-NH-CH(CH<tspan dy="4" font-size="9">3</tspan><tspan dy="-4" font-size="13">)</tspan><tspan dy="4" font-size="9">2</tspan></text>
 
-          <rect x="310" y="18" width="174" height="52" rx="8" fill="rgba(13,27,42,0.92)" stroke="rgba(244,197,66,0.55)"/>
-          <path d="M410 70 C412 78, 407 82, 395 86" fill="none" stroke="#f4c542" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
-          <text x="324" y="40" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">Primary metabolite:</text>
-          <text x="324" y="57" fill="#f4c542" font-family="IBM Plex Sans" font-size="13">Deethylatrazine (DEA)</text>
+          <!-- C-6 (L 215,262): Cl leaving group, bond going left -->
+          <line x1="215" y1="262" x2="148" y2="262" stroke="#a8c8b8" stroke-width="2"/>
+          <text x="141" y="267" fill="#e05c5c" font-family="IBM Plex Mono" font-size="15" font-weight="700" text-anchor="end">Cl</text>
+
+          <!-- ANNOTATION: Triazine ring aromatic stability (top, arrow to ring) -->
+          <text font-family="IBM Plex Sans" font-size="12" fill="#a8c8b8" text-anchor="middle">
+            <tspan x="300" y="50">Triazine ring: aromatic stability</tspan>
+            <tspan x="300" dy="16">(resists biodegradation)</tspan>
+          </text>
+          <line x1="300" y1="68" x2="300" y2="180" stroke="#f4c542" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <polygon points="300,186 294,174 306,174" fill="#f4c542"/>
+
+          <!-- ANNOTATION: Primary metabolite DEA (upper right, arrow to ethylamino bond) -->
+          <text font-family="IBM Plex Sans" font-size="12" fill="#a8c8b8" text-anchor="middle">
+            <tspan x="448" y="74">Primary metabolite:</tspan>
+            <tspan x="448" dy="16">Deethylatrazine (DEA)</tspan>
+          </text>
+          <line x1="418" y1="92" x2="402" y2="143" stroke="#f4c542" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <polygon points="400,148 393,136 406,137" fill="#f4c542"/>
+
+          <!-- ANNOTATION: Leaving group (lower left, arrow up to Cl) -->
+          <text font-family="IBM Plex Sans" font-size="12" fill="#a8c8b8" text-anchor="middle">
+            <tspan x="116" y="412">Leaving group</tspan>
+            <tspan x="116" dy="16">(hydrolysis target)</tspan>
+          </text>
+          <line x1="130" y1="408" x2="147" y2="273" stroke="#f4c542" stroke-width="1.5" stroke-dasharray="5,4"/>
+          <polygon points="148,267 141,279 153,278" fill="#f4c542"/>
         </svg>
       </div>
       <div class="glass-card svg-frame" style="margin-top:20px">
